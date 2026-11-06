@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>赤松バスケットクラブ｜初心者・低学年 大歓迎！小学生のバスケットボールクラブ</title>
+<meta name="description" content="赤松バスケットクラブの公式サイト。初心者・低学年大歓迎！練習は火・水・金・土。毎月第1土曜日の13時から体験会を開いています。今なら入会でバスケットボール（練習球）をプレゼント。">
+<meta name="theme-color" content="#0b0c11">
+<meta property="og:type" content="website">
+<meta property="og:title" content="赤松バスケットクラブ">
+<meta property="og:description" content="初心者・低学年大歓迎！毎月第1土曜日は体験会。今なら入会でバスケットボールをプレゼント。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23ff7a1a'/%3E%3Cg fill='none' stroke='%232a1206' stroke-width='5'%3E%3Cpath d='M50 4v92M4 50h92M18 18c13 11 20 20 20 32s-7 21-20 32M82 18c-13 11-20 20-20 32s7 21 20 32'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&text=%E3%82%B3%E3%83%BC%E3%83%88%E3%81%AE%E4%B8%AD%E3%81%AB%E3%81%84%E3%81%AA%E3%81%84%E6%99%82%E3%82%82%E3%80%81%E3%83%97%E3%83%AC%E3%82%A4%E3%81%97%E3%81%A6%E3%82%8B%E4%BA%BA%E3%82%92%E6%9C%AC%E6%B0%97%E3%81%A7%E8%A6%8B%E3%81%A6%E3%81%9F%E3%81%8F%E3%81%95%E3%82%93%E5%A3%B0%E3%82%92%E3%81%8B%E3%81%91%E3%82%88%E3%81%86%E3%80%82&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>
+  document.documentElement.classList.add('js');
+  if (location.protocol === 'file:') document.documentElement.classList.add('is-local');
+</script>
+</head>
+<body>
+
+<!-- 何度も使う絵（ボール・アイコン） -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="ballGrad" cx="36%" cy="30%" r="75%">
+      <stop offset="0" stop-color="#ffb877"/>
+      <stop offset=".42" stop-color="#ff7a1a"/>
+      <stop offset="1" stop-color="#b9430a"/>
+    </radialGradient>
+    <radialGradient id="ballShade" cx="50%" cy="50%" r="50%">
+      <stop offset=".7" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".28"/>
+    </radialGradient>
+    <symbol id="ball" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="48" fill="url(#ballGrad)"/>
+      <g fill="none" stroke="#2a1206" stroke-width="2.4" stroke-linecap="round">
+        <path d="M50 2v96"/>
+        <path d="M2 50h96"/>
+        <path d="M17 15c14 12 21 22 21 35s-7 23-21 35"/>
+        <path d="M83 15c-14 12-21 22-21 35s7 23 21 35"/>
+      </g>
+      <circle cx="50" cy="50" r="48" fill="url(#ballShade)"/>
+      <ellipse cx="34" cy="26" rx="13" ry="7" fill="#fff" opacity=".22" transform="rotate(-28 34 26)"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h3l1.6 4.2-2.1 1.3a11.5 11.5 0 0 0 5.9 5.9l1.3-2.1 4.2 1.6v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7 8.5 6 8.5-6"/></g></symbol>
+    <symbol id="i-line" viewBox="0 0 24 24"><path d="M12 3.5c-5.2 0-9.3 3.3-9.3 7.4 0 3.6 3.1 6.6 7.4 7.3l-.5 2.6c-.1.4.3.7.7.5l3.9-2.9c4.3-.6 7.7-3.7 7.7-7.5 0-4.1-4.2-7.4-9.4-7.4z" fill="currentColor"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.5h8V9a4 4 0 0 1-8 0z"/><path d="M8 5.5H4.5A3.5 3.5 0 0 0 8 10M16 5.5h3.5A3.5 3.5 0 0 1 16 10M12 13v4M8 20.5h8M9.5 17h5"/></g></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 21V3.5"/><path d="M5.5 4h12l-2.5 4.5L17.5 13h-12"/></g></symbol>
+    <symbol id="i-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8.5" r="3"/><circle cx="16" cy="8.5" r="3"/><path d="M2.5 20c0-3.2 2.5-5.5 5.5-5.5s5.5 2.3 5.5 5.5M10.5 20c0-3.2 2.5-5.5 5.5-5.5s5.5 2.3 5.5 5.5"/></g></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5V12l2.2-5.5h11.6L20 12v4.5z"/><path d="M4 12h16M7 16.5v2M17 16.5v2"/><circle cx="7.5" cy="14" r=".6" fill="currentColor"/><circle cx="16.5" cy="14" r=".6" fill="currentColor"/></g></symbol>
+    <symbol id="i-board" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V2.8h6V4M8.5 10l1.5 1.5L13 8.5M8.5 16l1.5 1.5 3-3"/></g></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.4A4.1 4.1 0 0 1 12 7.2a4.1 4.1 0 0 1 7.5 2.4C19.5 15.4 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2.3 4 2.3 4-2.3 4-2.3M9 9.5h.01M15 9.5h.01"/></g></symbol>
+    <symbol id="i-hands" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21v-5l-2.5-4.5a1.4 1.4 0 0 1 2.4-1.4L8.5 12V5a1.3 1.3 0 0 1 2.6 0v5"/><path d="M17 21v-5l2.5-4.5a1.4 1.4 0 0 0-2.4-1.4L15.5 12V5a1.3 1.3 0 0 0-2.6 0v5"/><path d="M12 2.5v-1M8 3 7 2M16 3l1-1"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ ヘッダー ============ -->
+<header class="site-header" id="siteHeader">
+  <a class="brand" href="#top" aria-label="赤松バスケットクラブ トップへ">
+    <svg class="brand-ball" aria-hidden="true"><use href="#ball"/></svg>
+    <span class="brand-text">
+      <span class="brand-ja">赤松バスケットクラブ</span>
+      <span class="brand-en">AKAMATSU BASKETBALL CLUB</span>
+    </span>
+  </a>
+  <nav class="gnav" id="gnav" aria-label="メニュー">
+    <a href="#about">私たちの思い</a>
+    <a href="#schedule">練習日</a>
+    <a href="#trial">体験会</a>
+    <a href="#coaches">コーチ</a>
+    <a href="#parents">保護者の方へ</a>
+    <a href="#sponsor">スポンサー</a>
+    <a class="gnav-cta" href="#contact">お問い合わせ</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ============ トップ（動画＋流れる文字） ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <!-- 動画がないとき・読み込み中に見える背景 -->
+    <div class="hero-fallback">
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <svg class="court" viewBox="0 0 1000 620" preserveAspectRatio="xMidYMax meet">
+        <rect x="20" y="20" width="960" height="580" rx="6"/>
+        <rect x="370" y="20" width="260" height="230"/>
+        <circle cx="500" cy="250" r="110"/>
+        <path d="M150 20V110A350 300 0 0 0 850 110V20"/>
+        <path d="M445 52H555"/>
+        <circle cx="500" cy="76" r="17"/>
+        <circle cx="500" cy="600" r="110"/>
+      </svg>
+      <div class="streaks"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-ball">
+        <div class="hero-ball-glow"></div>
+        <svg class="hero-ball-svg"><use href="#ball"/></svg>
+      </div>
+    </div>
+
+    <!-- ★ トップの写真：images/hero-1.jpg・hero-2.jpg（ゆっくり切りかわる。動画があれば動画を優先）
+         --pc / --sp は、PC とスマホで写真のどこを見せるか（横% 縦%） -->
+    <div class="hero-photo">
+      <div class="hero-photo-edge"></div>
+      <div class="hero-slides">
+        <img src="images/hero-1.jpg" alt="" style="--pc: 50% 22%; --sp: 52% 50%" data-slide>
+        <img src="images/hero-2.jpg" alt="" style="--pc: 50% 36%; --sp: 30% 50%" data-slide>
+      </div>
+    </div>
+
+    <!-- ★ 子どもたちの動画：videos/hero.mp4 に置くと自動で流れます（音なし・くり返し） -->
+    <video class="hero-video" id="heroVideo" src="videos/hero.mp4" autoplay muted loop playsinline preload="auto"></video>
+
+    <div class="hero-shade"></div>
+    <div class="hero-outline">
+      <div class="outline-row"><span>AKAMATSU BASKETBALL CLUB&nbsp;&nbsp;</span><span>AKAMATSU BASKETBALL CLUB&nbsp;&nbsp;</span></div>
+      <div class="outline-row rev"><span>RUN · JUMP · SHOOT · SMILE ·&nbsp;</span><span>RUN · JUMP · SHOOT · SMILE ·&nbsp;</span></div>
+    </div>
+  </div>
+
+  <div class="hero-inner">
+    <p class="hero-kicker" style="--i:0"><span class="dot"></span>AKAMATSU BASKETBALL CLUB</p>
+    <h1 class="hero-title">
+      <span class="sr-only">赤松バスケットクラブ　走れ。跳べ。決めろ。</span>
+      <span class="rot" style="--i:1" aria-hidden="true"><span class="rot-track"><span>走れ。</span><span>跳べ。</span><span>決めろ。</span><span>走れ。</span></span></span>
+      <span class="hero-main" style="--i:2">次の主役は、<br class="sp-only">きみだ。</span>
+    </h1>
+    <p class="hero-sub" style="--i:3"><strong>初心者・低学年 大歓迎！</strong><br>毎月 第1土曜日は 体験会。</p>
+    <div class="hero-cta" style="--i:4">
+      <a class="btn btn-primary" href="#trial">体験会に行ってみる<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#schedule">練習日を見る</a>
+    </div>
+    <p class="dev-hint hero-hint">動画を <code>videos/hero.mp4</code> に入れると、写真から動画に切りかわります（この案内はパソコンで開いたときだけ出ます）</p>
+  </div>
+
+  <div class="ticker" aria-label="お知らせ">
+    <div class="ticker-track">
+      <div class="ticker-group">
+        <span>初心者・低学年 大歓迎</span><svg class="tk-star" aria-hidden="true"><use href="#i-star"/></svg>
+        <span>体験会 毎月第1土曜 13:00〜14:00</span><svg class="tk-star" aria-hidden="true"><use href="#i-star"/></svg>
+        <span>今なら入会でバスケットボールをプレゼント</span><svg class="tk-star" aria-hidden="true"><use href="#i-star"/></svg>
+        <span>練習は 火・水・金・土</span><svg class="tk-star" aria-hidden="true"><use href="#i-star"/></svg>
+      </div>
+      <div class="ticker-group" aria-hidden="true">
+        <span>初心者・低学年 大歓迎</span><svg class="tk-star"><use href="#i-star"/></svg>
+        <span>体験会 毎月第1土曜 13:00〜14:00</span><svg class="tk-star"><use href="#i-star"/></svg>
+        <span>今なら入会でバスケットボールをプレゼント</span><svg class="tk-star"><use href="#i-star"/></svg>
+        <span>練習は 火・水・金・土</span><svg class="tk-star"><use href="#i-star"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 入会特典 ============ -->
+<section class="gift" id="gift" aria-labelledby="giftTitle">
+  <div class="wrap gift-inner">
+    <div class="gift-art" aria-hidden="true">
+      <svg class="gift-ball"><use href="#ball"/></svg>
+      <svg class="gift-bow" viewBox="0 0 120 70">
+        <path d="M60 38C44 14 14 6 12 24s26 22 48 14z" fill="#e3262f"/>
+        <path d="M60 38C76 14 106 6 108 24s-26 22-48 14z" fill="#e3262f"/>
+        <path d="M54 40 40 68l12-4 6 6 4-30zM66 40l14 28-12-4-6 6-4-30z" fill="#b8141d"/>
+        <circle cx="60" cy="37" r="9" fill="#ff4a52"/>
+      </svg>
+    </div>
+    <div class="gift-text">
+      <p class="gift-badge">今なら 入会特典</p>
+      <h2 class="gift-title" id="giftTitle">バスケットボール<small>（練習球）</small>を<br><em>プレゼント！</em></h2>
+      <p class="gift-note">入会してくれたみんなに、自分だけのボールを。おうちでも練習できるね！</p>
+    </div>
+    <a class="btn btn-dark gift-btn" href="#trial">体験会の日を見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<!-- ============ 私たちの思い ============ -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <p class="sec-en">OUR SPIRIT</p>
+        <h2>私たちの思い</h2>
+        <p class="about-lead reveal">「<em>できた！</em>」を、<br>仲間と一緒に。</p>
+      </div>
+      <div class="about-body reveal">
+        <p>赤松バスケットクラブが大切にしているのは、一人ひとりの「できた！」です。</p>
+        <p>はじめてボールにさわる子も、もっとうまくなりたい子も。昨日できなかったことが、今日できる。その喜びを、仲間と分かち合えるチームを目指しています。</p>
+        <p>バスケットボールを通して、<strong>あきらめない心</strong>と、<strong>仲間を思いやる心</strong>を育てます。</p>
+      </div>
+    </div>
+    <figure class="board reveal">
+      <blockquote class="board-text">コートの中にいない時も、<br>プレイしてる人を本気で見て、<br>たくさん声をかけよう。</blockquote>
+      <figcaption>体育館のホワイトボードより</figcaption>
+    </figure>
+    <ul class="values">
+      <li class="value reveal" style="--d:0"><span class="value-no">01</span><h3>楽しむ</h3><p>「楽しい！」が、いちばんの上達のもと。</p></li>
+      <li class="value reveal" style="--d:1"><span class="value-no">02</span><h3>あきらめない</h3><p>最後のホイッスルまで、全力で。</p></li>
+      <li class="value reveal" style="--d:2"><span class="value-no">03</span><h3>仲間を大切に</h3><p>学年をこえて、声をかけ合う。</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ アットホームな雰囲気 ============ -->
+<section class="section family" id="family">
+  <div class="wrap">
+    <p class="sec-en">AT HOME</p>
+    <h2>学年をこえて、<br class="sp-only">みんな仲よし。</h2>
+    <p class="lead">アットホームな雰囲気が、私たちの自慢です。上級生が下級生に声をかけ、できたときはみんなでハイタッチ。はじめての子も、すぐに仲間になれます。</p>
+    <div class="gallery">
+      <!-- ★ 写真：images/photo-1.jpg 〜 photo-3.jpg（style の object-position で、写真のどこを見せるかを決めています） -->
+      <figure class="ph ph-a reveal" style="--d:0">
+        <img src="images/photo-1.jpg" alt="上級生が、下級生のくつひもを結んであげている様子" loading="lazy" style="object-position: 50% 42%" data-fallback>
+        <div class="ph-fallback" aria-hidden="true"><svg class="ico"><use href="#i-smile"/></svg><span class="dev-hint">images/photo-1.jpg</span></div>
+        <figcaption>上級生が、そっと手をかす。</figcaption>
+      </figure>
+      <figure class="ph ph-b reveal" style="--d:1">
+        <img src="images/photo-2.jpg" alt="体育館の床に、水とうとタオルがきれいに一列に並んでいる" loading="lazy" style="object-position: 50% 58%" data-fallback>
+        <div class="ph-fallback" aria-hidden="true"><svg class="ico"><use href="#i-star"/></svg><span class="dev-hint">images/photo-2.jpg</span></div>
+        <figcaption>水とうもタオルも、みんなできちんと。</figcaption>
+      </figure>
+      <figure class="ph ph-c reveal" style="--d:2">
+        <img src="images/photo-3.jpg" alt="子どもたちが手書きした、秋季大会までのカウントダウンカード" loading="lazy" style="object-position: 50% 30%" data-fallback>
+        <div class="ph-fallback" aria-hidden="true"><svg class="ico"><use href="#i-team"/></svg><span class="dev-hint">images/photo-3.jpg</span></div>
+        <figcaption>大会までの日を、手づくりで数える。</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 初心者・低学年 歓迎 ============ -->
+<section class="section welcome" id="welcome">
+  <div class="wrap">
+    <div class="welcome-head">
+      <div>
+        <p class="sec-en">WELCOME</p>
+        <h2>はじめてでも、<br>だいじょうぶ！</h2>
+      </div>
+      <div class="stickers" aria-hidden="true">
+        <span class="sticker st-red">初心者<b>大歓迎</b></span>
+        <span class="sticker st-gold">低学年<b>大歓迎</b></span>
+      </div>
+    </div>
+    <ul class="qa">
+      <li class="qa-item reveal" style="--d:0">
+        <p class="qa-q">バスケは やったことが ないけど…</p>
+        <p class="qa-a">基本のドリブルやパスから、ていねいに教えます。最初はみんな初心者です！</p>
+      </li>
+      <li class="qa-item reveal" style="--d:1">
+        <p class="qa-q">1・2年生でも だいじょうぶ？</p>
+        <p class="qa-a">大歓迎！できることから、少しずつ。上級生もやさしく声をかけてくれます。</p>
+      </li>
+      <li class="qa-item reveal" style="--d:2">
+        <p class="qa-q">運動は あまり とくいじゃない…</p>
+        <p class="qa-a">いちばん大切なのは「やってみたい！」の気持ち。一緒に楽しもう！</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 大会 ============ -->
+<section class="section games" id="games">
+  <div class="wrap">
+    <p class="sec-en">GAMES</p>
+    <h2>大会にも、<br class="sp-only">どんどん挑戦！</h2>
+    <p class="lead">練習でがんばったことを、試合でためす。大会の前は、子どもたちが手づくりのカードで日にちを数えて、「心を1つに!!」。勝ってうれしい日も、負けてくやしい日も、ぜんぶが成長の時間です。</p>
+    <!-- ★ 大会名は、実際に出ている大会の名前に書きかえてください -->
+    <ul class="game-list">
+      <li class="game reveal" style="--d:0">
+        <span class="game-ico"><svg class="ico" aria-hidden="true"><use href="#i-trophy"/></svg></span>
+        <p class="game-tag">OFFICIAL</p>
+        <h3>公式戦</h3>
+        <p>秋季大会など、市や地区の大会に出場しています。チーム一丸となって、上を目指します。</p>
+      </li>
+      <li class="game reveal" style="--d:1">
+        <span class="game-ico"><svg class="ico" aria-hidden="true"><use href="#i-flag"/></svg></span>
+        <p class="game-tag">CUP</p>
+        <h3>カップ戦・招待大会</h3>
+        <p>近くのチームが集まる大会で、たくさんの試合を経験します。</p>
+      </li>
+      <li class="game reveal" style="--d:2">
+        <span class="game-ico"><svg class="ico" aria-hidden="true"><use href="#i-team"/></svg></span>
+        <p class="game-tag">FRIENDLY</p>
+        <h3>交流戦・練習試合</h3>
+        <p>ほかのチームと試合をして、練習の成果をためします。</p>
+      </li>
+    </ul>
+    <p class="dev-hint">大会名は index.html の「大会」の所で、実際の名前に書きかえてください</p>
+  </div>
+</section>
+
+<!-- ============ コーチ紹介 ============ -->
+<section class="section coaches" id="coaches">
+  <div class="wrap">
+    <p class="sec-en">COACHES</p>
+    <h2>本気で向き合う、<br class="sp-only">3人のコーチ。</h2>
+    <p class="lead">一人ひとりの「やってみたい」に、本気で向き合う。厳しさの中にも、あたたかさがある。子どもたちが大好きな、素敵なコーチたちです。</p>
+    <ul class="coach-list">
+      <!-- ★ 写真：images/coach-mori.jpg ／ coach-hasegawa.jpg ／ coach-tanaka.jpg（たて長がきれいに入ります） -->
+      <li class="coach reveal" style="--d:0">
+        <div class="ph coach-photo">
+          <img src="images/coach-mori.jpg" alt="森コーチ" loading="lazy" data-fallback>
+          <div class="ph-fallback" aria-hidden="true"><span class="initial">森</span><span class="dev-hint">images/coach-mori.jpg</span></div>
+        </div>
+        <div class="coach-body">
+          <p class="coach-en">COACH MORI</p>
+          <h3 class="coach-name">森 コーチ</h3>
+          <p class="coach-quote">できるまで、何度でも一緒にやろう。</p>
+        </div>
+      </li>
+      <li class="coach reveal" style="--d:1">
+        <div class="ph coach-photo">
+          <img src="images/coach-hasegawa.jpg" alt="長谷川コーチ" loading="lazy" data-fallback>
+          <div class="ph-fallback" aria-hidden="true"><span class="initial">長</span><span class="dev-hint">images/coach-hasegawa.jpg</span></div>
+        </div>
+        <div class="coach-body">
+          <p class="coach-en">COACH HASEGAWA</p>
+          <h3 class="coach-name">長谷川 コーチ</h3>
+          <p class="coach-quote">うまくいかない日こそ、成長のチャンス。</p>
+        </div>
+      </li>
+      <li class="coach reveal" style="--d:2">
+        <div class="ph coach-photo">
+          <img src="images/coach-tanaka.jpg" alt="田中コーチ" loading="lazy" data-fallback>
+          <div class="ph-fallback" aria-hidden="true"><span class="initial">田</span><span class="dev-hint">images/coach-tanaka.jpg</span></div>
+        </div>
+        <div class="coach-body">
+          <p class="coach-en">COACH TANAKA</p>
+          <h3 class="coach-name">田中 コーチ</h3>
+          <p class="coach-quote">楽しむ気持ちを、いちばん大事に。</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 練習日 ============ -->
+<section class="section schedule" id="schedule">
+  <div class="wrap">
+    <p class="sec-en">PRACTICE</p>
+    <h2>練習日</h2>
+    <ol class="week" aria-label="練習する曜日">
+      <li>月</li><li class="on">火</li><li class="on">水</li><li>木</li><li class="on">金</li><li class="on sat">土</li><li>日</li>
+    </ol>
+    <div class="timetable">
+      <div class="tt-axis" aria-hidden="true">
+        <span style="--h:13">13:00</span><span style="--h:15">15:00</span><span style="--h:17">17:00</span><span style="--h:19">19:00</span>
+      </div>
+      <div class="tt-row reveal">
+        <p class="tt-day"><b>火</b><span>TUE</span></p>
+        <p class="tt-time"><span class="t">17:00<i>〜</i>19:00</span><span class="len">2時間</span></p>
+        <div class="tt-bar" aria-hidden="true"><span style="--s:17;--e:19"></span></div>
+      </div>
+      <div class="tt-row reveal">
+        <p class="tt-day"><b>水</b><span>WED</span></p>
+        <p class="tt-time"><span class="t">17:00<i>〜</i>18:15</span><span class="len">1時間15分</span></p>
+        <div class="tt-bar" aria-hidden="true"><span style="--s:17;--e:18.25"></span></div>
+      </div>
+      <div class="tt-row reveal">
+        <p class="tt-day"><b>金</b><span>FRI</span></p>
+        <p class="tt-time"><span class="t">17:00<i>〜</i>19:30</span><span class="len">2時間30分</span></p>
+        <div class="tt-bar" aria-hidden="true"><span style="--s:17;--e:19.5"></span></div>
+      </div>
+      <div class="tt-row sat reveal">
+        <p class="tt-day"><b>土</b><span>SAT</span></p>
+        <p class="tt-time"><span class="t">13:00<i>〜</i>17:00</span><span class="len">4時間</span></p>
+        <div class="tt-bar" aria-hidden="true"><span style="--s:13;--e:17"></span></div>
+      </div>
+    </div>
+    <p class="place">練習場所：<span id="placeText">お問い合わせください</span></p>
+  </div>
+</section>
+
+<!-- ============ 体験会 ============ -->
+<section class="section trial" id="trial">
+  <div class="trial-deco" aria-hidden="true"><svg><use href="#ball"/></svg></div>
+  <div class="wrap trial-grid">
+    <div class="trial-main">
+      <p class="sec-en">TRIAL</p>
+      <h2 class="trial-title"><span>毎月 第1土曜日は</span>体験会！</h2>
+      <p class="trial-time"><span class="en">13:00 – 14:00</span></p>
+      <p class="trial-note">※ 大会の前はお休みです。参加の前に、ひとことご連絡いただけると安心です。</p>
+
+      <div class="bring">
+        <p class="bring-title">持ちもの</p>
+        <ul>
+          <li>体育館シューズ</li><li>動きやすい服</li><li>水とう</li><li>タオル</li>
+        </ul>
+      </div>
+
+      <ol class="flow">
+        <li><span class="flow-no">1</span><b>連絡する</b><small>電話・メール・LINEで</small></li>
+        <li><span class="flow-no">2</span><b>体験会に参加</b><small>第1土曜 13:00〜</small></li>
+        <li><span class="flow-no">3</span><b>入会！</b><small>ボールをプレゼント</small></li>
+      </ol>
+    </div>
+
+    <aside class="trial-side">
+      <div class="next-card" id="nextCard">
+        <p class="next-label">次の体験会</p>
+        <p class="next-date"><span id="nextDate">第1土曜日</span><span class="next-chip" id="nextChip" hidden></span></p>
+        <p class="next-time">13:00〜14:00</p>
+        <p class="next-after" id="nextAfter" hidden></p>
+      </div>
+      <div class="mini-gift">
+        <svg class="mini-gift-ball" aria-hidden="true"><use href="#ball"/></svg>
+        <p><small>今なら 入会特典</small>バスケットボール<br>（練習球）プレゼント！</p>
+      </div>
+      <a class="btn btn-gold btn-block" href="#contact">体験会に申し込む<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ 保護者の方へ ============ -->
+<section class="section parents" id="parents">
+  <div class="wrap">
+    <p class="sec-en">FOR PARENTS</p>
+    <h2>保護者のみなさんも、<br>あたたかい仲間です。</h2>
+    <p class="lead">保護者のみなさんも、優しくて素敵な方ばかり。はじめての方も、すぐになじめる雰囲気です。</p>
+    <ul class="care-list">
+      <li class="care reveal" style="--d:0">
+        <span class="care-ico"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></span>
+        <h3>試合の送迎</h3>
+        <p>保護者どうしで声をかけ合い、協力しています。</p>
+      </li>
+      <li class="care reveal" style="--d:1">
+        <span class="care-ico"><svg class="ico" aria-hidden="true"><use href="#i-board"/></svg></span>
+        <h3>練習の当番</h3>
+        <p>負担になりすぎないように、みんなで分け合っています。</p>
+      </li>
+      <li class="care reveal" style="--d:2">
+        <span class="care-ico"><svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></span>
+        <h3>おたがいさま</h3>
+        <p>「できる人が、できるときに」。無理なく続けられる関係です。</p>
+      </li>
+    </ul>
+    <div class="worry reveal">
+      <p class="worry-q">「仕事が忙しいけど、続けられるかな…」</p>
+      <p class="worry-a">そんな方も、まずはお気軽にご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お問い合わせ ============ -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <p class="sec-en">CONTACT</p>
+    <h2>入会を考えている方は、<br>お気軽にご連絡ください。</h2>
+    <p class="lead">体験会のことだけでも、ちょっとした質問でも大歓迎です。</p>
+    <!-- 連絡先は js/site-data.js で書きかえます -->
+    <div class="contact-btns" id="contactBtns"></div>
+    <p class="contact-person" id="contactPerson" hidden></p>
+  </div>
+</section>
+
+<!-- ============ 応援してくださっている企業 ============ -->
+<section class="section supporters" id="supporters">
+  <div class="wrap">
+    <p class="sec-en">SUPPORTERS</p>
+    <h2>私たちの活動を<br>応援してくださっている企業</h2>
+    <p class="lead">地域のみなさまに支えられて、子どもたちは今日もコートを走っています。ありがとうございます！</p>
+    <!-- 企業は js/site-data.js の sponsors に足すと、ここに並びます -->
+    <div class="sponsor-grid" id="sponsorGrid"></div>
+  </div>
+</section>
+
+<!-- ============ スポンサー募集 ============ -->
+<section class="section sponsor" id="sponsor">
+  <div class="wrap">
+    <div class="sponsor-head">
+      <div>
+        <p class="sec-en">BECOME A SPONSOR</p>
+        <h2>私たちのスポンサーに<br>なりませんか？</h2>
+        <p class="lead">子どもたちの挑戦を、一緒に応援してください。地域のみなさまへの、御社のPRにもつながります。</p>
+      </div>
+      <div class="sponsor-art" aria-hidden="true">
+        <svg class="jersey" viewBox="0 0 200 220">
+          <path d="M55 10Q100 52 145 10L161 14Q160 62 176 82V212H24V82Q40 62 39 14Z" fill="#e3262f"/>
+          <path d="M55 10Q100 52 145 10M161 14Q160 62 176 82M39 14Q40 62 24 82" fill="none" stroke="#fff" stroke-width="5"/>
+          <text x="100" y="78" text-anchor="middle" fill="#fff" font-family="Bebas Neue, Impact, sans-serif" font-size="22" letter-spacing="2">AKAMATSU</text>
+          <text x="100" y="146" text-anchor="middle" fill="#fff" font-family="Bebas Neue, Impact, sans-serif" font-size="74">7</text>
+          <rect x="58" y="164" width="84" height="32" rx="5" fill="rgba(255,255,255,.12)" stroke="#ffc83a" stroke-width="2.5" stroke-dasharray="6 4"/>
+          <text x="100" y="186" text-anchor="middle" fill="#ffc83a" font-family="Bebas Neue, Impact, sans-serif" font-size="17" letter-spacing="1.5">YOUR LOGO</text>
+        </svg>
+        <span class="burst"><small>今だけ！</small>全プラン<b>半額</b></span>
+      </div>
+    </div>
+
+    <ul class="plans">
+      <li class="plan reveal" style="--d:0">
+        <p class="plan-tag">BRONZE</p>
+        <h3 class="plan-name">サイト掲載プラン</h3>
+        <p class="plan-price"><s><span>通常</span>¥10,000</s><span class="now"><b>¥5,000</b><span class="unit">1口あたり</span><em>今だけ半額</em></span></p>
+        <ul class="feat">
+          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>このサイトに、御社サイトへのリンクを掲載</span></li>
+          <li class="no"><span class="sr-only">含まれない：</span>ユニフォームに御社のロゴ</li>
+          <li class="no"><span class="sr-only">含まれない：</span>年2回、子どもたちとの交流</li>
+        </ul>
+      </li>
+      <li class="plan reveal" style="--d:1">
+        <p class="plan-tag">SILVER</p>
+        <h3 class="plan-name">ユニフォームプラン</h3>
+        <p class="plan-price"><s><span>通常</span>¥30,000</s><span class="now"><b>¥15,000</b><em>今だけ半額</em></span></p>
+        <ul class="feat">
+          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>このサイトに、御社サイトへのリンクを掲載</span></li>
+          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>ユニフォームに御社のロゴ</span></li>
+          <li class="no"><span class="sr-only">含まれない：</span>年2回、子どもたちとの交流</li>
+        </ul>
+      </li>
+      <li class="plan plan-gold reveal" style="--d:2">
+        <p class="plan-tag">GOLD</p>
+        <h3 class="plan-name">交流プラン</h3>
+        <p class="plan-price"><s><span>通常</span>¥50,000</s><span class="now"><b>¥25,000</b><em>今だけ半額</em></span></p>
+        <ul class="feat">
+          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>このサイトに、御社サイトへのリンクを掲載</span></li>
+          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>ユニフォームに御社のロゴ</span></li>
+          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>年2回、子どもたちとの交流<small>（御社の宣伝の機会もあります）</small></span></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="sponsor-cta">
+      <a class="btn btn-primary" id="sponsorMail" href="#contact">スポンサーについて問い合わせる<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ フッター ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="brand" href="#top">
+      <svg class="brand-ball" aria-hidden="true"><use href="#ball"/></svg>
+      <span class="brand-text"><span class="brand-ja">赤松バスケットクラブ</span><span class="brand-en">AKAMATSU BASKETBALL CLUB</span></span>
+    </a>
+    <dl class="footer-info">
+      <div><dt>練習</dt><dd>火 17:00〜19:00 ／ 水 17:00〜18:15 ／ 金 17:00〜19:30 ／ 土 13:00〜17:00</dd></div>
+      <div><dt>体験会</dt><dd>毎月 第1土曜日 13:00〜14:00（大会前はお休み）</dd></div>
+    </dl>
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <a href="#about">私たちの思い</a><a href="#schedule">練習日</a><a href="#trial">体験会</a><a href="#coaches">コーチ</a><a href="#parents">保護者の方へ</a><a href="#sponsor">スポンサー</a><a href="#contact">お問い合わせ</a>
+    </nav>
+    <p class="copy">© <span id="year">2026</span> 赤松バスケットクラブ</p>
+  </div>
+</footer>
+
+<!-- スクロールすると出てくる申し込みボタン -->
+<a class="sticky-cta" id="stickyCta" href="#contact" aria-hidden="true" tabindex="-1">
+  <svg class="sticky-ball" aria-hidden="true"><use href="#ball"/></svg>
+  <span><b>体験会に申し込む</b><small>毎月 第1土曜 13:00〜</small></span>
+  <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+</a>
+
+<noscript><style>.ph img{opacity:1}</style></noscript>
+<script src="js/site-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
