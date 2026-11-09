@@ -381,6 +381,34 @@
   </div>
 </section>
 
+<!-- ============ 練習カレンダー（保護者会アプリの予定とつながっている） ============ -->
+<section class="section calendar" id="calendar">
+  <div class="wrap">
+    <p class="sec-en">CALENDAR</p>
+    <h2>練習カレンダー</h2>
+    <p class="lead">日にちを押すと、その日の<strong>見学</strong>や<strong>体験会</strong>を申し込めます。</p>
+    <div class="cal" id="cal">
+      <div class="cal-head">
+        <button type="button" class="cal-nav prev" id="calPrev" aria-label="前の月"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="cal-month" id="calMonth" aria-live="polite">　</p>
+        <button type="button" class="cal-nav" id="calNext" aria-label="次の月"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="cal-week" aria-hidden="true"><span class="sun">日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span class="sat">土</span></div>
+      <div class="cal-grid" id="calGrid"></div>
+      <p class="cal-note" id="calNote" hidden></p>
+      <ul class="cal-legend" aria-hidden="true">
+        <li><i class="lg-practice"></i>練習</li>
+        <li><i class="lg-trial"></i>体験会</li>
+        <li><i class="lg-game"></i>大会・練習試合</li>
+        <li><i class="lg-off"></i>お休み</li>
+      </ul>
+    </div>
+    <div class="cal-admin" id="calAdminBar">
+      <button type="button" class="cal-admin-btn" id="calAdmin">係の方：予定を入れる・直す</button>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 体験会 ============ -->
 <section class="section trial" id="trial">
   <div class="trial-deco" aria-hidden="true"><svg><use href="#ball"/></svg></div>
@@ -399,7 +427,7 @@
       </div>
 
       <ol class="flow">
-        <li><span class="flow-no">1</span><b>連絡する</b><small>電話・メール・LINEで</small></li>
+        <li><span class="flow-no">1</span><b>申し込む</b><small>カレンダーの日にちから</small></li>
         <li><span class="flow-no">2</span><b>体験会に参加</b><small>第1土曜 13:00〜</small></li>
         <li><span class="flow-no">3</span><b>入会！</b><small>ボールをプレゼント</small></li>
       </ol>
@@ -416,7 +444,7 @@
         <svg class="mini-gift-ball" aria-hidden="true"><use href="#ball"/></svg>
         <p><small>今なら 入会特典</small>バスケットボール<br>（練習球）プレゼント！</p>
       </div>
-      <a class="btn btn-gold btn-block" href="#contact">体験会に申し込む<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-gold btn-block" href="#calendar" data-apply="trial">体験会に申し込む<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </aside>
   </div>
 </section>
@@ -474,7 +502,7 @@
   </div>
 </section>
 
-<!-- ============ スポンサー募集 ============ -->
+<!-- ============ スポンサー募集（料金は sponsor.html） ============ -->
 <section class="section sponsor" id="sponsor">
   <div class="wrap">
     <div class="sponsor-head">
@@ -482,6 +510,13 @@
         <p class="sec-en">BECOME A SPONSOR</p>
         <h2>私たちのスポンサーに<br>なりませんか？</h2>
         <p class="lead">子どもたちの挑戦を、一緒に応援してください。地域のみなさまへの、御社のPRにもつながります。</p>
+        <ul class="perks">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>このサイトに、御社サイトへのリンク</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>ユニフォームに、御社のロゴ</li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>年2回、子どもたちとの交流</li>
+        </ul>
+        <a class="btn btn-primary" href="sponsor.html">スポンサープランを見る<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="perks-note">プランの内容と料金は、こちらのページでご案内しています。</p>
       </div>
       <div class="sponsor-art" aria-hidden="true">
         <svg class="jersey" viewBox="0 0 200 220">
@@ -492,44 +527,7 @@
           <rect x="58" y="164" width="84" height="32" rx="5" fill="rgba(255,255,255,.12)" stroke="#ffc83a" stroke-width="2.5" stroke-dasharray="6 4"/>
           <text x="100" y="186" text-anchor="middle" fill="#ffc83a" font-family="Bebas Neue, Impact, sans-serif" font-size="17" letter-spacing="1.5">YOUR LOGO</text>
         </svg>
-        <span class="burst"><small>今だけ！</small>全プラン<b>半額</b></span>
       </div>
-    </div>
-
-    <ul class="plans">
-      <li class="plan reveal" style="--d:0">
-        <p class="plan-tag">BRONZE</p>
-        <h3 class="plan-name">サイト掲載プラン</h3>
-        <p class="plan-price"><s><span>通常</span>¥10,000</s><span class="now"><b>¥5,000</b><span class="unit">1口あたり</span><em>今だけ半額</em></span></p>
-        <ul class="feat">
-          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>このサイトに、御社サイトへのリンクを掲載</span></li>
-          <li class="no"><span class="sr-only">含まれない：</span>ユニフォームに御社のロゴ</li>
-          <li class="no"><span class="sr-only">含まれない：</span>年2回、子どもたちとの交流</li>
-        </ul>
-      </li>
-      <li class="plan reveal" style="--d:1">
-        <p class="plan-tag">SILVER</p>
-        <h3 class="plan-name">ユニフォームプラン</h3>
-        <p class="plan-price"><s><span>通常</span>¥30,000</s><span class="now"><b>¥15,000</b><em>今だけ半額</em></span></p>
-        <ul class="feat">
-          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>このサイトに、御社サイトへのリンクを掲載</span></li>
-          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>ユニフォームに御社のロゴ</span></li>
-          <li class="no"><span class="sr-only">含まれない：</span>年2回、子どもたちとの交流</li>
-        </ul>
-      </li>
-      <li class="plan plan-gold reveal" style="--d:2">
-        <p class="plan-tag">GOLD</p>
-        <h3 class="plan-name">交流プラン</h3>
-        <p class="plan-price"><s><span>通常</span>¥50,000</s><span class="now"><b>¥25,000</b><em>今だけ半額</em></span></p>
-        <ul class="feat">
-          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>このサイトに、御社サイトへのリンクを掲載</span></li>
-          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>ユニフォームに御社のロゴ</span></li>
-          <li class="yes"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>年2回、子どもたちとの交流<small>（御社の宣伝の機会もあります）</small></span></li>
-        </ul>
-      </li>
-    </ul>
-    <div class="sponsor-cta">
-      <a class="btn btn-primary" id="sponsorMail" href="#contact">スポンサーについて問い合わせる<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>
   </div>
 </section>
@@ -555,14 +553,24 @@
 </footer>
 
 <!-- スクロールすると出てくる申し込みボタン -->
-<a class="sticky-cta" id="stickyCta" href="#contact" aria-hidden="true" tabindex="-1">
+<a class="sticky-cta" id="stickyCta" href="#calendar" data-apply="trial" aria-hidden="true" tabindex="-1">
   <svg class="sticky-ball" aria-hidden="true"><use href="#ball"/></svg>
   <span><b>体験会に申し込む</b><small>毎月 第1土曜 13:00〜</small></span>
   <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
 </a>
 
+<!-- 日にちを押したときの窓（申し込み・予定の入力） -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet-backdrop" data-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button type="button" class="sheet-close" data-close aria-label="閉じる"><span aria-hidden="true">×</span></button>
+    <div class="sheet-body" id="sheetBody"></div>
+  </div>
+</div>
+
 <noscript><style>.ph img{opacity:1}</style></noscript>
 <script src="js/site-data.js"></script>
 <script src="js/main.js"></script>
+<script src="js/calendar.js"></script>
 </body>
 </html>

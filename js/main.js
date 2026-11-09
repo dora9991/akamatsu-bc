@@ -78,6 +78,7 @@
 
   /* ---------- トップの写真（動画がないとき、ゆっくり切りかえる） ---------- */
   (function () {
+    if (!hero) return;
     var imgs = $$('.hero-slides img[data-slide]');
     var ready = [];
     var cur = -1, timer = null;
@@ -123,45 +124,18 @@
 
   /* ---------- 練習場所 ---------- */
   var place = str(S.place);
-  if (place) $('#placeText').textContent = place;
-
-  /* ---------- 次の体験会（毎月 第1土曜日 13:00〜14:00） ---------- */
-  (function () {
-    var skip = Array.isArray(S.trialSkip) ? S.trialSkip : [];
-    var now = new Date();
-    var ymd = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
-    var firstSat = function (y, m) {
-      var first = new Date(y, m, 1);
-      return new Date(y, m, 1 + (6 - first.getDay() + 7) % 7);
-    };
-    var list = [];
-    for (var i = 0; i < 24 && list.length < 2; i++) {
-      var d = firstSat(now.getFullYear(), now.getMonth() + i);
-      var end = new Date(d.getFullYear(), d.getMonth(), d.getDate(), 14, 0, 0);
-      if (end <= now) continue;
-      if (skip.indexOf(ymd(d)) !== -1) continue;
-      list.push(d);
-    }
-    if (!list.length) return;
-    var label = function (d) { return (d.getMonth() + 1) + '月' + d.getDate() + '日（土）'; };
-    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-    var days = Math.round((new Date(list[0].getFullYear(), list[0].getMonth(), list[0].getDate()) - today) / 864e5);
-
-    $('#nextDate').textContent = label(list[0]);
-    var chip = $('#nextChip');
-    chip.textContent = days === 0 ? 'きょう！' : days === 1 ? 'あした！' : 'あと' + days + '日';
-    chip.hidden = false;
-    if (list[1]) {
-      var after = $('#nextAfter');
-      after.textContent = 'その次は ' + label(list[1]);
-      after.hidden = false;
-    }
-  })();
+  if (place && $('#placeText')) $('#placeText').textContent = place;
 
   /* ---------- 連絡先のボタン ---------- */
   (function () {
     var box = $('#contactBtns');
     var tel = str(S.tel), mail = str(S.mail), line = str(S.line);
+    // スポンサーの問い合わせ：メールがあれば件名つきで開く（スポンサーのページ）
+    if (mail && $('#sponsorMail')) {
+      $('#sponsorMail').href = 'mailto:' + mail + '?subject=' + encodeURIComponent('【スポンサーについて】赤松バスケットクラブ') +
+        '&body=' + encodeURIComponent(['赤松バスケットクラブ ご担当者さま', '', 'スポンサーについて問い合わせます。', '', '・会社名：', '・ご担当者さま：', '・気になるプラン：', '・ご連絡先：', ''].join('\r\n'));
+    }
+    if (!box) return;
     var body = [
       '赤松バスケットクラブ ご担当者さま', '',
       '体験会・入会について問い合わせます。', '',
@@ -191,17 +165,12 @@
 
     var person = str(S.contactPerson);
     if (person) { var pe = $('#contactPerson'); pe.textContent = '担当：' + person; pe.hidden = false; }
-
-    // スポンサーの問い合わせ：メールがあれば件名つきで開く
-    if (mail) {
-      $('#sponsorMail').href = 'mailto:' + mail + '?subject=' + encodeURIComponent('【スポンサーについて】赤松バスケットクラブ') +
-        '&body=' + encodeURIComponent(['赤松バスケットクラブ ご担当者さま', '', 'スポンサーについて問い合わせます。', '', '・会社名：', '・ご担当者さま：', '・気になるプラン：', '・ご連絡先：', ''].join('\r\n'));
-    }
   })();
 
   /* ---------- 応援企業 ---------- */
   (function () {
     var grid = $('#sponsorGrid');
+    if (!grid) return;
     var list = (Array.isArray(S.sponsors) ? S.sponsors : []).filter(function (s) { return s && str(s.name); });
     var html = list.map(function (s) {
       var plan = /^(gold|silver|bronze)$/.test(s.plan) ? s.plan : 'bronze';
@@ -249,10 +218,10 @@
   /* ---------- 申し込みボタン（トップとお問い合わせが見えている間は隠す） ---------- */
   var sticky = $('#stickyCta');
   if (sticky && 'IntersectionObserver' in window) {
-    var seen = { top: true, contact: false, past: false };
+    var seen = { top: true, contact: false, calendar: false, past: false };
     var update = function () {
-      // トップと「お問い合わせ」より下（企業向けの所）では出さない
-      var show = !seen.top && !seen.contact && !seen.past;
+      // トップ・カレンダー・「お問い合わせ」が見えている間と、それより下（企業向けの所）では出さない
+      var show = !seen.top && !seen.contact && !seen.calendar && !seen.past;
       sticky.classList.toggle('show', show);
       sticky.setAttribute('aria-hidden', show ? 'false' : 'true');
       sticky.tabIndex = show ? 0 : -1;
@@ -266,8 +235,9 @@
     }, { threshold: 0 });
     watch.observe($('#top'));
     watch.observe($('#contact'));
+    if ($('#calendar')) watch.observe($('#calendar'));
   }
 
   /* ---------- 年 ---------- */
-  $('#year').textContent = new Date().getFullYear();
+  if ($('#year')) $('#year').textContent = new Date().getFullYear();
 })();
