@@ -1,4 +1,4 @@
-/* 赤松バスケットクラブ ― 画面の動き
+/* 赤松バスケットクラブMBC ― 画面の動き
    書きかえる内容は js/site-data.js にまとめてあります。 */
 (function () {
   'use strict';
@@ -132,12 +132,12 @@
     var tel = str(S.tel), mail = str(S.mail), line = str(S.line);
     // スポンサーの問い合わせ：メールがあれば件名つきで開く（スポンサーのページ）
     if (mail && $('#sponsorMail')) {
-      $('#sponsorMail').href = 'mailto:' + mail + '?subject=' + encodeURIComponent('【スポンサーについて】赤松バスケットクラブ') +
-        '&body=' + encodeURIComponent(['赤松バスケットクラブ ご担当者さま', '', 'スポンサーについて問い合わせます。', '', '・会社名：', '・ご担当者さま：', '・気になるプラン：', '・ご連絡先：', ''].join('\r\n'));
+      $('#sponsorMail').href = 'mailto:' + mail + '?subject=' + encodeURIComponent('【スポンサーについて】赤松バスケットクラブMBC') +
+        '&body=' + encodeURIComponent(['赤松バスケットクラブMBC ご担当者さま', '', 'スポンサーについて問い合わせます。', '', '・会社名：', '・ご担当者さま：', '・気になるプラン：', '・ご連絡先：', ''].join('\r\n'));
     }
     if (!box) return;
     var body = [
-      '赤松バスケットクラブ ご担当者さま', '',
+      '赤松バスケットクラブMBC ご担当者さま', '',
       '体験会・入会について問い合わせます。', '',
       '・お子さまのお名前：',
       '・学年：',
@@ -149,7 +149,7 @@
     var items = [
       { cls: 'c-tel', ico: 'i-phone', label: '電話する', sub: tel, href: tel ? 'tel:' + tel.replace(/[^\d+]/g, '') : '' },
       { cls: 'c-mail', ico: 'i-mail', label: 'メールする', sub: mail,
-        href: mail ? 'mailto:' + mail + '?subject=' + encodeURIComponent('【体験会・入会】赤松バスケットクラブ') + '&body=' + encodeURIComponent(body) : '' },
+        href: mail ? 'mailto:' + mail + '?subject=' + encodeURIComponent('【体験会・入会】赤松バスケットクラブMBC') + '&body=' + encodeURIComponent(body) : '' },
       { cls: 'c-line', ico: 'i-line', label: 'LINEで聞く', sub: line ? '友だち追加して、メッセージ' : '', href: line }
     ];
     box.innerHTML = items.map(function (it) {

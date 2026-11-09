@@ -1,4 +1,4 @@
-/* 赤松バスケットクラブ ― 練習カレンダー
+/* 赤松バスケットクラブMBC ― 練習カレンダー
    ・予定は保護者会アプリ（hogosha）と同じ表から読む（公開してよい「練習・大会・練習試合・臨時練習」の日と時間だけ）。
      読めないとき・その月の予定がまだ入っていないときは、いつもの練習日（site-data.js の weekly）を目安として出す
    ・日にちを押すと、見学・体験会の申し込み（LINE・メール・文面のコピー）
@@ -428,7 +428,7 @@
   };
   var message = function (x) {
     return [
-      '【' + (x.kind === 'trial' ? '体験会' : '見学') + 'の申し込み】赤松バスケットクラブ',
+      '【' + (x.kind === 'trial' ? '体験会' : '見学') + 'の申し込み】赤松バスケットクラブMBC',
       '日にち：' + md(x.day) + ' ' + x.when,
       'お子さま：' + x.child + '（' + x.grade + '）',
       x.exp ? 'バスケの経験：' + x.exp : '',
@@ -638,7 +638,7 @@
       if (act === 'copy') {
         copyText(text).then(function (ok) { toast(ok ? '文面をコピーしました。' : 'コピーできませんでした。'); });
       } else if (act === 'send-mail') {
-        location.href = 'mailto:' + str(S.mail) + '?subject=' + encodeURIComponent('【' + (x.kind === 'trial' ? '体験会' : '見学') + 'の申し込み】赤松バスケットクラブ') + '&body=' + encodeURIComponent(text.replace(/\n/g, '\r\n'));
+        location.href = 'mailto:' + str(S.mail) + '?subject=' + encodeURIComponent('【' + (x.kind === 'trial' ? '体験会' : '見学') + 'の申し込み】赤松バスケットクラブMBC') + '&body=' + encodeURIComponent(text.replace(/\n/g, '\r\n'));
       } else {
         var oa = str(S.lineOaId);
         if (oa) {
