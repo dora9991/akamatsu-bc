@@ -167,18 +167,43 @@
     if (person) { var pe = $('#contactPerson'); pe.textContent = '担当：' + person; pe.hidden = false; }
   })();
 
+  /* ---------- 個人サポーター（トップ） ---------- */
+  (function () {
+    var box = $('#supporterNames');
+    var names = (Array.isArray(S.supporters) ? S.supporters : []).map(str).filter(Boolean);
+    if (!box || !names.length) return;
+    box.innerHTML = '<b>個人で応援してくださっているみなさま</b>' + names.map(esc).join('・');
+    box.hidden = false;
+  })();
+
+  /* ---------- スポンサーのページ：枠の残り（sponsors の plan を数える） ---------- */
+  (function () {
+    var els = $$('[data-slot]');
+    if (!els.length) return;
+    var list = (Array.isArray(S.sponsors) ? S.sponsors : []).filter(function (s) { return s && str(s.name); });
+    els.forEach(function (el) {
+      var key = el.getAttribute('data-slot');
+      var max = parseInt(el.getAttribute('data-max'), 10) || 1;
+      var used = list.filter(function (s) { return s.plan === key; }).length;
+      if (used >= max) { el.textContent = '決まりました'; el.classList.add('is-full'); }
+      else if (used > 0) { el.textContent = 'あと' + (max - used) + '社'; }
+    });
+  })();
+
   /* ---------- 応援企業 ---------- */
   (function () {
     var grid = $('#sponsorGrid');
     if (!grid) return;
     var list = (Array.isArray(S.sponsors) ? S.sponsors : []).filter(function (s) { return s && str(s.name); });
     var html = list.map(function (s) {
-      var plan = /^(gold|silver|bronze)$/.test(s.plan) ? s.plan : 'bronze';
+      // 胸（chest）は大きく。背中・パンツ・練習着は中くらい。ほかは同じ大きさ（gold/silver/bronze の昔の書き方も使える）
+      var plan = /^(chest|gold)$/.test(s.plan) ? 'gold' : /^(back|pants|wear|silver)$/.test(s.plan) ? 'silver' : 'bronze';
       var logo = str(s.logo);
       var face = logo
         ? '<img src="' + esc(logo) + '" alt="' + esc(s.name) + '" loading="lazy">'
         : '<span class="sp-name">' + esc(s.name) + '</span>';
-      var inner = '<span class="sp-face">' + face + '</span><span class="sp-cap">' + esc(s.name) + '</span>';
+      var inner = (s.first ? '<span class="sp-first">はじまりの応援団</span>' : '') +
+        '<span class="sp-face">' + face + '</span><span class="sp-cap">' + esc(s.name) + '</span>';
       var url = str(s.url);
       return url
         ? '<a class="sp-card sp-' + plan + '" href="' + esc(url) + '" target="_blank" rel="noopener sponsored">' + inner + '</a>'

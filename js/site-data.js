@@ -35,15 +35,27 @@ window.SITE = {
   trialSkip: [],
 
   /* ── 応援してくださっている企業（スポンサー） ──
-     1社ごとに { } を1つ。上から順に並びます。
-       name : 会社名（ロゴがないときは、この名前が表示されます）
-       url  : 会社のサイト（押すと開きます）
-       logo : ロゴ画像（images/sponsors/ に入れて、名前を書く。なければ "" ）
-       plan : "gold"（大きく表示）/ "silver" / "bronze"
+     1社ごとに { } を1つ。上から順に、トップの「応援してくださっている企業」に並びます。
+       name  : 会社名（ロゴがないときは、この名前が表示されます）
+       url   : 会社のサイト（押すと開きます。なければ "" ）
+       logo  : ロゴ画像（images/sponsors/ に入れて、名前を書く。なければ "" ）
+       plan  : どの応援か
+               "chest"   … 試合ユニフォームの胸（1社・大きく表示）
+               "back"    … 試合ユニフォームの背中（2社まで）
+               "pants"   … 試合ユニフォームのパンツ（1社）
+               "wear"    … 練習着スポンサー（6社まで）
+               "partner" … 応援企業
+             chest・back・pants・wear を書くと、スポンサーのページの「募集中 → あと◯社 → 決まりました」も自動で変わります。
+       first : 最初の5社（はじまりの応援団）なら true（印がつきます）
      例:
-     { name: "〇〇工務店", url: "https://example.com", logo: "images/sponsors/maru-koumuten.png", plan: "gold" },
+     { name: "〇〇工務店", url: "https://example.com", logo: "images/sponsors/maru-koumuten.png", plan: "chest", first: true },
+     { name: "△△商店",   url: "",                    logo: "",                                   plan: "partner" },
   */
   sponsors: [
 
   ],
+
+  /* ── 個人サポーター（お名前を出してよい方だけ。トップの企業の下に並びます） ──
+     例: ["山田 太郎 様", "赤松OB会 様"]                                     */
+  supporters: [],
 };
